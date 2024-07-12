@@ -11,7 +11,9 @@ export default {
       colors: {
         primary: "#2FBFA6",
         secondary: "#36E1BC",
+        "ijo-muda": "#9CFFEA",
         biru: "#18BEFD",
+        merah: "#FF0000",
       },
     },
   },
