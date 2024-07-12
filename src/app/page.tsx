@@ -1,25 +1,58 @@
+import { MdMoreHoriz, MdHistory } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { CiSettings } from "react-icons/ci";
 import Image from "next/image";
-import Link from "next/link";
-import Home from "./components/Home";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[url('/home-left.svg')] bg-no-repeat">
-      <div className="flex min-h-screen flex-col items-start gap-12 bg-[url('/home-right.svg')] bg-right-bottom bg-no-repeat px-[10%] py-16">
-        <Link href="/" className="bg-primary rounded-lg p-2 px-4 text-white">
-          Back
-        </Link>
-        <h1 className="w-full text-center text-3xl font-semibold">My Band</h1>
+    <div className="flex min-h-screen flex-col gap-8 bg-[url('/start-left.svg')] bg-no-repeat px-[10%] py-16">
+      <div className="flex justify-between">
+        <div className="border-biru w-fit rounded-full border bg-white p-3 shadow-md">
+          <MdMoreHoriz className="text-2xl" />
+        </div>
+        <div className="border-biru w-fit rounded-full border bg-white p-3 shadow-md">
+          <CgProfile className="text-2xl" />
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <div className="border-biru flex w-fit gap-4 rounded-full border bg-white p-3 shadow-md">
+          <CiSettings className="text-2xl" />
+          <p>Settings</p>
+        </div>
+        <div className="border-biru w-fit rounded-full border bg-white p-3 shadow-md">
+          <Image
+            src={"/band-outline.svg"}
+            alt="My Band"
+            width={28}
+            height={25}
+          />
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <div className="border-biru flex w-fit gap-4 rounded-full border bg-white p-3 shadow-md">
+          <MdHistory className="text-2xl" />
+          <p>History</p>
+        </div>
+      </div>
 
-        <Image
-          src={"/band.svg"}
-          alt="My Band"
-          width={156}
-          height={160}
-          className="self-center rounded-lg"
-        />
+      {/* Button Section */}
+      <div className="mt-4 flex aspect-square w-80 items-center justify-center self-center rounded-full bg-white shadow-md">
+        <div className="shadow-biru flex aspect-square w-48 items-center justify-center self-center rounded-full bg-white shadow-lg">
+          <p>
+            Hold to <strong>Start</strong>
+          </p>
+        </div>
+      </div>
 
-        <Home />
+      {/* Foot Section */}
+      <div className="flex items-center justify-end gap-2">
+        <div className="border-secondary shadow-secondary w-fit rounded-lg border px-4 py-2 shadow-sm">
+          <p>
+            Hi, <strong>Gibeh</strong> 👋
+          </p>
+        </div>
+
+        <Image src={"/chat-button.svg"} width={60} height={60} alt="chat-bot" />
       </div>
     </div>
   );

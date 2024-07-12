@@ -11,6 +11,7 @@ export default {
       colors: {
         primary: "#2FBFA6",
         secondary: "#36E1BC",
+        biru: "#18BEFD",
       },
     },
   },
