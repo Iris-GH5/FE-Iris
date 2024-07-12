@@ -20,6 +20,7 @@ export default function Register() {
 
     toast.success("Registration successful");
     console.log(data);
+    window.location.href = "/register/complete";
   };
 
   return (
