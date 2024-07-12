@@ -44,7 +44,7 @@ export default function VerifyTruePage() {
 
       <div className="mt-14 flex flex-col gap-2">
         <h1 className="text-center text-4xl font-semibold">Danger Detected</h1>
-        <p className="text-center">We'll be here until you're safe</p>
+        <p className="text-center">{"We'll be here until you're safe"}</p>
       </div>
     </div>
   );

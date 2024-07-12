@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function Register() {
+  const router = useRouter();
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,9 +19,8 @@ export default function Register() {
       confirmPassword,
     };
 
-    toast.success("Registration successful");
+    router.push("/register/complete");
     console.log(data);
-    window.location.href = "/register/complete";
   };
 
   return (

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function VerifyTruePage() {
   return (
@@ -13,16 +14,19 @@ export default function VerifyTruePage() {
 
       <div className="mt-14 flex flex-col gap-2">
         <h1 className="text-center text-4xl font-semibold">
-          Phew, we’re glad you’re safe!
+          {"Phew, we’re glad you’re safe!"}
         </h1>
         <p className="text-center">
-          We’re here if you want to talk about what happened.
+          {"We’re here if you want to talk about what happened."}
         </p>
 
         <div className="mt-8 flex justify-center gap-4">
-          <button className="rounded-lg bg-slate-300 px-6 py-3 text-white">
-            I'm Okay
-          </button>
+          <Link
+            href="/"
+            className="rounded-lg bg-slate-300 px-6 py-3 text-white"
+          >
+            {"I'm Okay"}
+          </Link>
           <button className="rounded-lg bg-primary px-6 py-3 text-white">
             Yes, please
           </button>

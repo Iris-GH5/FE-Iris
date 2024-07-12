@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Complete() {
   const [step, setStep] = useState(1);
@@ -110,7 +111,7 @@ function FirstStep({ setStep }: StepProps) {
           <label className="text-slate-400">Gender</label>
           <div className="rounded-lg border border-slate-200 p-2">
             <select
-              className="w-full"
+              className="w-full bg-transparent"
               onChange={(e) => setGender(e.target.value)}
             >
               <option value="male">Male</option>
@@ -193,7 +194,7 @@ function SecondStep({ setStep }: StepProps) {
           <label className="text-slate-400">Gender</label>
           <div className="rounded-lg border border-slate-200 p-2">
             <select
-              className="w-full"
+              className="w-full bg-transparent"
               onChange={(e) => setGender(e.target.value)}
             >
               <option value="male">Male</option>
@@ -288,10 +289,10 @@ function ThirdStep({ setStep }: StepProps) {
 }
 
 function FourthStep() {
+  const router = useRouter();
   useEffect(() => {
     toast.success("You’re all set!");
-
-    window.location.href = "/";
+    router.push("/");
   }, []);
   return (
     <>

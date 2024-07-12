@@ -83,7 +83,7 @@ function NeedShelter({ onRespond }: NeedShelterProps) {
             className="rounded-lg bg-slate-300 px-6 py-3 text-white"
             onClick={() => onRespond(false)}
           >
-            I'm Okay
+            {"I'm Okay"}
           </button>
           <button
             className="rounded-lg bg-primary px-6 py-3 text-white"
