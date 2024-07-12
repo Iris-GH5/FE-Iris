@@ -11,10 +11,14 @@
     "db:studio": "drizzle-kit studio",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "static": "next build && next export"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.1.0",
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tanstack/react-query": "^5.39.0",
     "@trpc/client": "next",
@@ -32,6 +36,7 @@
     "zod": "^3.23.3"
   },
   "devDependencies": {
+    "@capacitor/cli": "^6.1.0",
     "@types/eslint": "^8.56.2",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.57",
