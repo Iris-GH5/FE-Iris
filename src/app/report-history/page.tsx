@@ -19,7 +19,7 @@ const reports: Report[] = [
     date: "Friday, 4 July 2024",
     title: "Sexual Harassment at the Workplace",
     location: "Jalan Haji Naim, Blok B No. 31, Jakarta Selatan",
-    time: "14:30 WIB",
+    time: "02:00 WIB",
     status: "In Review",
   },
   {
@@ -27,7 +27,7 @@ const reports: Report[] = [
     date: "Thursday, 3 July 2024",
     title: "Domestic Violence",
     location: "Jalan Haji Naim, Blok B No. 31, Jakarta Selatan",
-    time: "14:30 WIB",
+    time: "02:00 WIB",
     status: "Accepted",
   },
   {
@@ -35,7 +35,7 @@ const reports: Report[] = [
     date: "Wednesday, 2 July 2024",
     title: "Sexual Harassment at the Workplace",
     location: "Jalan Haji Naim, Blok B No. 31, Jakarta Selatan",
-    time: "14:30 WIB",
+    time: "02:30 WIB",
     status: "Accepted",
   },
 ];
@@ -57,7 +57,7 @@ const ReportHistory: React.FC = () => {
             <p className="pb-2 pl-2 text-sm text-gray-500">{report.date}</p>
             <div
               className="mb-4 cursor-pointer rounded-3xl border border-primary bg-white p-4 shadow-md"
-              onClick={() => router.push(`/report-detail/${report.id}`)}
+              onClick={() => router.push(`/report-history/report-detail`)}
             >
               <div className="flex items-center justify-between gap-4">
                 <h2 className="text-md w-2/3 font-semibold">{report.title}</h2>
