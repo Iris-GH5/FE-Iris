@@ -102,7 +102,7 @@ function FirstStep({ setStep }: StepProps) {
           <label className="text-slate-400">Address</label>
           <input
             onChange={(e) => setAddress(e.target.value)}
-            type="password"
+            type="text"
             placeholder="Enter Address"
             className="w-full rounded-lg border border-slate-200 p-2"
           />

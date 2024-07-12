@@ -20,12 +20,7 @@ export default function VerifyInput() {
   };
 
   const handleVerify = () => {
-    const isTrue = Math.random() >= 0.5;
-    if (isTrue) {
-      router.push("/verify/true");
-    } else {
-      router.push("/verify/false");
-    }
+    router.push("/verify/false");
   };
 
   return (
