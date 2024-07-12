@@ -105,9 +105,11 @@ const ReportDetailPage = () => {
                 <p className="mt-2 text-sm">Image</p>
               </div>
             </div>
+            <Link href="/report-history/report-detail/evidence">
             <p className="mt-2 pb-8 text-sm font-bold text-primary">
               See More →
             </p>
+            </Link>
           </div>
         </div>
         <div className="mt-8 flex flex-row items-center justify-center gap-4 rounded-xl bg-primary p-4 shadow-md">
