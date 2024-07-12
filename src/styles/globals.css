@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-battery {
+  background: linear-gradient(
+    150deg,
+    #01f2cf 13.82%,
+    #03da9a 64.15%,
+    #03b3da 126.15%
+  );
+}
