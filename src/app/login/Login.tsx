@@ -1,9 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,6 +17,8 @@ export default function Login() {
       password,
     };
     console.log(data);
+    toast.success("Login successful");
+    router.push("/");
   };
 
   return (
@@ -53,14 +59,20 @@ export default function Login() {
             Sign in
           </button>
 
-          <button className="flex w-full items-center justify-center gap-4 rounded-lg border border-slate-200 bg-white py-2 text-black">
+          <button
+            onClick={handleLogin}
+            className="flex w-full items-center justify-center gap-4 rounded-lg border border-slate-200 bg-white py-2 text-black"
+          >
             <Image src="/logo-google.svg" alt="Google" width={24} height={24} />
             <p>Sign In with Google</p>
           </button>
         </div>
 
         <p>
-          {"Don't have an account?"} <strong>Sign up</strong>
+          {"Don't have an account?"}{" "}
+          <Link href={"/register"} className="font-bold">
+            Sign up
+          </Link>
         </p>
       </div>
     </div>

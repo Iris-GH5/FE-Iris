@@ -6,7 +6,7 @@ export default function VerifyPage() {
       <div className="w-full px-[10%]">
         <div className="gap-2">
           <h1 className="text-4xl font-semibold">Hold on..</h1>
-          <p>We're making sure it's really you</p>
+          <p>{"We're making sure it's really you"}</p>
         </div>
 
         <VerifyInput />

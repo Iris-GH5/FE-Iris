@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import ToasterContext from "./context/ToasterContext";
 
 export const metadata = {
   title: "iRiS",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
+        <ToasterContext />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
