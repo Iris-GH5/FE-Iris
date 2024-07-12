@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Image from "next/image";
 
@@ -288,6 +288,11 @@ function ThirdStep({ setStep }: StepProps) {
 }
 
 function FourthStep() {
+  useEffect(() => {
+    toast.success("You’re all set!");
+
+    window.location.href = "/";
+  }, []);
   return (
     <>
       <div className="mt-4 flex aspect-square w-80 items-center justify-center self-center rounded-full bg-ijo-muda/40 shadow-md">

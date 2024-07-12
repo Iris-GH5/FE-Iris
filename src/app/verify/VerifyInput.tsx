@@ -1,8 +1,11 @@
 "use client";
+
 import React, { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 export default function VerifyInput() {
   const inputRefs = useRef<HTMLInputElement[]>([]);
+  const router = useRouter();
 
   const handleChange = (
     index: number,
@@ -13,6 +16,15 @@ export default function VerifyInput() {
       if (index < inputRefs.current.length - 1) {
         inputRefs?.current[index + 1]?.focus();
       }
+    }
+  };
+
+  const handleVerify = () => {
+    const isTrue = Math.random() >= 0.5;
+    if (isTrue) {
+      router.push("/verify/true");
+    } else {
+      router.push("/verify/false");
     }
   };
 
@@ -35,7 +47,10 @@ export default function VerifyInput() {
           ))}
       </div>
 
-      <button className="mt-6 w-full rounded-lg bg-secondary py-2 text-white">
+      <button
+        onClick={handleVerify}
+        className="mt-6 w-full rounded-lg bg-secondary py-2 text-white"
+      >
         Verify
       </button>
     </div>

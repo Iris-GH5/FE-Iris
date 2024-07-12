@@ -56,12 +56,18 @@ function Safe({ setSafe }: SafeProps) {
   return (
     <div className="flex min-h-screen flex-col gap-8 bg-[url('/start-left.svg')] bg-no-repeat px-[10%] py-16">
       <div className="flex justify-between">
-        <div className="w-fit rounded-full border border-biru bg-white p-3 shadow-md">
+        <Link
+          href={"/report-history"}
+          className="w-fit rounded-full border border-biru bg-white p-3 shadow-md"
+        >
           <MdMoreHoriz className="text-2xl" />
-        </div>
-        <div className="w-fit rounded-full border border-biru bg-white p-3 shadow-md">
+        </Link>
+        <Link
+          href={"/login"}
+          className="w-fit rounded-full border border-biru bg-white p-3 shadow-md"
+        >
           <CgProfile className="text-2xl" />
-        </div>
+        </Link>
       </div>
       <div className="flex justify-between">
         <div className="flex w-fit gap-4 rounded-full border border-biru bg-white p-3 shadow-md">
