@@ -1,12 +1,11 @@
-import { IoIosLock } from "react-icons/io";
 import Image from "next/image";
 
 export default function VerifyTruePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-[5%]">
-      <div className="bg-ijo-muda/40 mt-4 flex aspect-square w-80 items-center justify-center self-center rounded-full shadow-md">
-        <div className="shadow-ijo-muda bg-ijo-muda/30 flex aspect-square w-64 items-center justify-center self-center rounded-full shadow-lg">
-          <div className="shadow-ijo-muda flex aspect-square w-48 items-center justify-center self-center rounded-full bg-white shadow-lg">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-ijo-muda/10 px-[5%]">
+      <div className="mt-4 flex aspect-square w-80 items-center justify-center self-center rounded-full bg-ijo-muda/40 shadow-md">
+        <div className="flex aspect-square w-64 items-center justify-center self-center rounded-full bg-ijo-muda/30 shadow-lg shadow-ijo-muda">
+          <div className="flex aspect-square w-48 items-center justify-center self-center rounded-full bg-white shadow-lg shadow-ijo-muda">
             <Image src="/smile.svg" alt="Logo" width={100} height={100} />
           </div>
         </div>
@@ -24,7 +23,7 @@ export default function VerifyTruePage() {
           <button className="rounded-lg bg-slate-300 px-6 py-3 text-white">
             I'm Okay
           </button>
-          <button className="bg-primary rounded-lg px-6 py-3 text-white">
+          <button className="rounded-lg bg-primary px-6 py-3 text-white">
             Yes, please
           </button>
         </div>
