@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Login() {
@@ -60,7 +61,10 @@ export default function Login() {
         </div>
 
         <p>
-          {"Don't have an account?"} <strong>Sign up</strong>
+          {"Don't have an account?"}{" "}
+          <Link href={"/register"} className="font-bold">
+            Sign up
+          </Link>
         </p>
       </div>
     </div>
